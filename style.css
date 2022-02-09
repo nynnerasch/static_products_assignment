@@ -168,6 +168,36 @@ p {
   }
 }
 
+article.soldOut img {
+  opacity: 0.5;
+}
+
+article.soldOut::before {
+  content: "sold out";
+  position: absolute;
+  background: skyblue;
+  color: black;
+  padding: 1rem;
+}
+
+article .discounted,
+article .price span {
+  display: none;
+}
+
+article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discounted > p {
+  margin-bottom: 0;
+}
+
+article.onSale .price span {
+  display: initial;
+}
+
 @media only screen and (min-width: 1024px) {
   #productlist {
     grid-template-columns: 1fr 1fr 1fr 1fr;
